@@ -14,7 +14,6 @@ class TodoEditViewController: UIViewController {
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var isDoneLabel: UILabel!
     
-    // ①一覧画面から受け取るように変数を用意
     var todoId: String!
     var todoTitle: String!
     var todoDetail: String!
@@ -22,7 +21,6 @@ class TodoEditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // ②初期値をセット
         titleTextField.text = todoTitle
         detailTextView.text = todoDetail
         
@@ -37,14 +35,12 @@ class TodoEditViewController: UIViewController {
     }
     
    override func viewDidLayoutSubviews() {
-        // レイアウトを設定
         detailTextView.layer.borderWidth = 1.0
         detailTextView.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
         detailTextView.layer.cornerRadius = 5.0
         detailTextView.layer.masksToBounds = true
     }
-
-    // ④編集ボタンの実装
+    
     @IBAction func tapEditButton(_ sender: Any) {
         if let title = titleTextField.text,
             let detail = detailTextView.text {
@@ -53,7 +49,7 @@ class TodoEditViewController: UIViewController {
                     [
                         "title": title,
                         "detail": detail,
-            "updatedAt": FieldValue.serverTimestamp()
+                        "updatedAt": FieldValue.serverTimestamp()
                     ]
                     ,completion: { error in
                         if let error = error {
@@ -70,13 +66,12 @@ class TodoEditViewController: UIViewController {
             
         }
     }
-    // ③完了、未完了切り替えボタンの実装
     @IBAction func tapDoneButton(_ sender: Any) {
         if let user = Auth.auth().currentUser {
             Firestore.firestore().collection("users/\(user.uid)/todos").document(todoId).updateData(
                 [
                     "isDone": !todoIsDone,
-            "updatedAt": FieldValue.serverTimestamp()
+                    "updatedAt": FieldValue.serverTimestamp()
                 ]
                 ,completion: { error in
                     if let error = error {
@@ -91,8 +86,7 @@ class TodoEditViewController: UIViewController {
             })
         }
     }
-
-    // ⑤削除ボタンの実装
+    
     @IBAction func tapDeleteButton(_ sender: Any) {
         if let user = Auth.auth().currentUser {
             Firestore.firestore().collection("users/\(user.uid)/todos").document(todoId).delete(){ error in

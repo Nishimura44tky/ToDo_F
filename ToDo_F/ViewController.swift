@@ -28,7 +28,7 @@ class ViewController: UIViewController {
             Auth.auth().createUser(withEmail: email, password: password, completion: { (result, error) in
                 if let user = result?.user {
                     print("ユーザー作成完了 uid:" + user.uid)
-                    // ②FirestoreのUsersコレクションにdocumentID = ログインしたuidでデータを作成する
+                    // ②FirestoreのUsersコレクションにdocumentID = ログインしたuidでnameを作成する
                     Firestore.firestore().collection("users").document(user.uid).setData([
                         "name": name
                     ], completion: { error in
@@ -56,6 +56,29 @@ class ViewController: UIViewController {
             })
         }
     }
+    
+    @IBAction func tapLoginButton(_ sender: Any) {
+        if let email = loginEmailTextField.text,
+            let password = loginPasswordTextField.text {
+            Auth.auth().signIn(withEmail: email, password: password, completion: { (result, error) in
+                if let user = result?.user {
+                    // 成功した場合
+                    print("ログイン完了 uid:" + user.uid)
+                    let storyboard: UIStoryboard = self.storyboard!
+                    let next = storyboard.instantiateViewController(withIdentifier: "TodoListViewController")
+                    self.present(next, animated: true, completion: nil)
+                } else if let error = error {
+                    // 失敗した場合
+                    print("ログイン失敗 " + error.localizedDescription)
+                    let dialog = UIAlertController(title: "ログイン失敗", message: error.localizedDescription, preferredStyle: .alert)
+                    dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(dialog, animated: true, completion: nil)
+                }
+            })
+        }
+    }
+    
+
 }
 
 
