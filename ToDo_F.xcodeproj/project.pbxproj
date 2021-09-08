@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4C55940C30E76A288B0C059A /* Pods_ToDo_F.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A004F6FC61527DE2FAF0AD0 /* Pods_ToDo_F.framework */; };
+		F313DF9026E842FF009ED19F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F313DF8F26E842FF009ED19F /* SplashViewController.swift */; };
 		F392E72926E0593300D3572F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F392E72826E0593300D3572F /* AppDelegate.swift */; };
 		F392E72B26E0593300D3572F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F392E72A26E0593300D3572F /* SceneDelegate.swift */; };
 		F392E72D26E0593300D3572F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F392E72C26E0593300D3572F /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 		8A004F6FC61527DE2FAF0AD0 /* Pods_ToDo_F.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDo_F.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE8CB2B5ACD808C55DC5ED68 /* Pods-ToDo_F.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo_F.release.xcconfig"; path = "Target Support Files/Pods-ToDo_F/Pods-ToDo_F.release.xcconfig"; sourceTree = "<group>"; };
 		E7CD609A28A25C0E03D66026 /* Pods-ToDo_F.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo_F.debug.xcconfig"; path = "Target Support Files/Pods-ToDo_F/Pods-ToDo_F.debug.xcconfig"; sourceTree = "<group>"; };
+		F313DF8F26E842FF009ED19F /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		F392E72526E0593300D3572F /* ToDo_F.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo_F.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F392E72826E0593300D3572F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F392E72A26E0593300D3572F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +58,6 @@
 				E7CD609A28A25C0E03D66026 /* Pods-ToDo_F.debug.xcconfig */,
 				DE8CB2B5ACD808C55DC5ED68 /* Pods-ToDo_F.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -98,6 +99,7 @@
 				F392E74026E05DB200D3572F /* TodoEditViewController.swift */,
 				F392E73126E0593500D3572F /* Assets.xcassets */,
 				F392E73326E0593500D3572F /* LaunchScreen.storyboard */,
+				F313DF8F26E842FF009ED19F /* SplashViewController.swift */,
 				F392E73626E0593500D3572F /* Info.plist */,
 				F392E74226E0ACBF00D3572F /* GoogleService-Info.plist */,
 			);
@@ -224,6 +226,7 @@
 				F392E73F26E05D8B00D3572F /* TodoAddViewController.swift in Sources */,
 				F392E72926E0593300D3572F /* AppDelegate.swift in Sources */,
 				F392E74126E05DB200D3572F /* TodoEditViewController.swift in Sources */,
+				F313DF9026E842FF009ED19F /* SplashViewController.swift in Sources */,
 				F392E72B26E0593300D3572F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
