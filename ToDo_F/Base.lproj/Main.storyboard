@@ -187,13 +187,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sv8-Dm-IOZ">
-                                <rect key="frame" x="296" y="487" width="79" height="75"/>
+                                <rect key="frame" x="287" y="472" width="72" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.83865255120000004" green="1" blue="0.98347455260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
-                                <state key="normal" title="＋">
-                                    <color key="titleColor" systemColor="systemIndigoColor"/>
-                                </state>
+                                <state key="normal" image="ビジネスで使えるファイルのダウンロード アイコン素材 2"/>
                                 <connections>
                                     <action selector="tapAddButton:" destination="Cd6-uh-Hdp" eventType="touchUpInside" id="JG3-FW-3ci"/>
                                 </connections>
@@ -381,6 +379,7 @@
     </scenes>
     <resources>
         <image name="ToDoF用スプラッシュ2" width="1536" height="1536"/>
+        <image name="ビジネスで使えるファイルのダウンロード アイコン素材 2" width="256" height="256"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
